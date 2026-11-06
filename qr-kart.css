@@ -1,0 +1,157 @@
+:root {
+  color-scheme: light;
+  --cream: #fff8ef;
+  --espresso: #352116;
+  --coffee: #78401f;
+  --caramel: #bd8956;
+  --latte: #f3e3cf;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 24px;
+  background: #e5d8c8;
+  color: var(--espresso);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.menu-card {
+  width: 105mm;
+  height: 148mm;
+  margin: 0 auto;
+  padding: 11mm 8mm 9mm;
+  display: grid;
+  grid-template-rows: auto auto auto auto 1fr;
+  justify-items: center;
+  align-items: start;
+  gap: 4mm;
+  text-align: center;
+  background: linear-gradient(165deg, var(--cream) 55%, var(--latte));
+  border-top: 2mm solid var(--coffee);
+  border-bottom: 2mm solid var(--coffee);
+  box-shadow: 0 8px 32px #35211626;
+}
+
+.brand h1 {
+  margin: 0;
+  font: 700 30pt/1.1 Georgia, 'Times New Roman', serif;
+  letter-spacing: -1.2pt;
+}
+
+.brand h1 span { color: var(--coffee); }
+
+.brand-subtitle {
+  margin: 2.5mm 0 0;
+  font-size: 7.5pt;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 1.1pt;
+}
+
+.slogan {
+  margin: 0;
+  color: var(--coffee);
+  font: italic 14pt/1.4 Georgia, 'Times New Roman', serif;
+}
+
+.qr-frame {
+  display: block;
+  width: 60mm;
+  height: 60mm;
+  padding: 5mm;
+  background: #fff;
+  line-height: 0;
+}
+
+.qr-frame img {
+  display: block;
+  width: 50mm;
+  height: 50mm;
+}
+
+.qr-frame:focus-visible {
+  outline: 3px solid #24658a;
+  outline-offset: 4px;
+}
+
+.scan-instruction {
+  margin: 0;
+  color: var(--espresso);
+  font-size: 10.5pt;
+  line-height: 1.6;
+}
+
+.coffee-detail {
+  display: flex;
+  align-items: center;
+  align-self: end;
+  gap: 4mm;
+  height: 8mm;
+  color: var(--caramel);
+}
+
+.detail-line { width: 13mm; height: .25mm; background: currentColor; }
+
+.coffee-icon {
+  position: relative;
+  display: block;
+  width: 6mm;
+  height: 4.5mm;
+  border: .45mm solid currentColor;
+  border-radius: 0 0 2mm 2mm;
+}
+
+.coffee-icon::before {
+  content: '';
+  position: absolute;
+  top: .3mm;
+  right: -2.4mm;
+  width: 2mm;
+  height: 2.3mm;
+  border: .45mm solid currentColor;
+  border-left: 0;
+  border-radius: 0 2mm 2mm 0;
+}
+
+.coffee-icon::after {
+  content: '';
+  position: absolute;
+  bottom: -1.6mm;
+  left: -1.4mm;
+  width: 8mm;
+  height: .45mm;
+  border-radius: 1mm;
+  background: currentColor;
+}
+
+@media screen and (max-width: 430px) {
+  body { padding: 12px; }
+  .menu-card { width: 100%; height: auto; min-height: 148mm; }
+  .brand h1 { font-size: 27pt; }
+  .brand-subtitle { letter-spacing: .5pt; }
+}
+
+@page {
+  size: 105mm 148mm;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    width: 105mm;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .menu-card {
+    margin: 0;
+    box-shadow: none;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
