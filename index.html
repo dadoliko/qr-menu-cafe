@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f4ec">
+  <meta name="description" content="Mavi Fincan Kafe'nin örnek dijital menüsü. Kahveler, serin içecekler, tatlılar ve küçük atıştırmalıklar.">
+  <title>Mavi Fincan Kafe — Dijital QR Menü</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#menu">Menüye geç</a>
+  <header class="site-header wrap">
+    <a class="brand" href="index.html" aria-label="Mavi Fincan Kafe ana sayfa">
+      <span class="brand-mark" aria-hidden="true">m<span>·</span></span>
+      <span class="brand-name">mavi fincan<span>KAFE & KÜÇÜK MUTLULUKLAR</span></span>
+    </a>
+    <span class="header-note"><span aria-hidden="true">✦</span> Bir fincanlık mola.</span>
+    <a class="menu-link" href="#menu">Menüyü keşfet <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="welcome-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true">—</span> MAVİ FİNCAN'A HOŞ GELDİNİZ</p>
+        <h1 id="welcome-title">Güzel bir gün,<br>iyi bir <em>fincanla.</em></h1>
+        <p class="hero-description">Kahvenizin kokusu, ilk lokmanın mutluluğu.<br>Biraz yavaşlayın, kendinize güzel bir şey seçin.</p>
+        <a class="hero-link" href="#menu">Bugün canınız ne ister? <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="coffee-scene" aria-hidden="true">
+        <span class="scene-caption">küçük molalar, güzel anlar</span>
+        <div class="steam steam-one"></div><div class="steam steam-two"></div>
+        <div class="saucer"></div>
+        <div class="cup-handle"></div>
+        <div class="coffee-cup"><div class="coffee"><span class="milk-heart">♥</span></div></div>
+        <span class="scene-spark spark-one">✳</span><span class="scene-spark spark-two">✧</span>
+        <span class="scene-label">ÖZENLE HAZIRLANIR.<br>KEYİFLE YUDUMLANIR.</span>
+      </div>
+      <div class="hero-footnote"><span aria-hidden="true">✦</span> Her molaya eşlik edecek bir lezzet var.</div>
+    </section>
+
+    <section id="menu" class="menu-section" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">BİR ŞEYLER SEÇELİM</p><h2 id="menu-title">Menümüz</h2></div>
+        <p>Sevdiğiniz tatlar, küçük keşifler.</p>
+      </div>
+      <nav class="category-nav" aria-label="Menü kategorileri" hidden>
+        <button type="button" class="category-button is-active" data-filter="all" aria-pressed="true" aria-controls="menu-grid">Tümü <span>12</span></button>
+        <button type="button" class="category-button" data-filter="hot" aria-pressed="false" aria-controls="menu-grid"><span aria-hidden="true">☕</span> Sıcak İçecekler</button>
+        <button type="button" class="category-button" data-filter="cold" aria-pressed="false" aria-controls="menu-grid"><span aria-hidden="true">❄</span> Soğuk İçecekler</button>
+        <button type="button" class="category-button" data-filter="dessert" aria-pressed="false" aria-controls="menu-grid"><span aria-hidden="true">♡</span> Tatlılar</button>
+        <button type="button" class="category-button" data-filter="snack" aria-pressed="false" aria-controls="menu-grid"><span aria-hidden="true">◒</span> Atıştırmalıklar</button>
+      </nav>
+      <div class="menu-search" hidden>
+        <label for="product-search">Ürün ara</label>
+        <div class="search-controls">
+          <input id="product-search" type="search" placeholder="Ürün adı veya açıklaması…" aria-controls="menu-grid" autocomplete="off">
+          <button id="clear-search" type="button" disabled>Aramayı temizle</button>
+        </div>
+      </div>
+      <div class="menu-meta"><p id="menu-status" role="status" aria-live="polite" aria-atomic="true">Tümü · 12 lezzet</p><span>Fiyatlar Türk lirası (TL) cinsindendir.</span></div>
+      <div id="menu-grid" class="menu-grid">
+        <article class="menu-card" data-category="hot">
+          <div class="card-top"><span class="product-icon hot" aria-hidden="true">☕</span><span class="product-category">Sıcak İçecekler</span><span class="badge">Favori</span></div>
+          <h3>Latte</h3><p>Espresso ve ipeksi süt köpüğünün yumuşacık buluşması.</p><div class="card-bottom"><span class="price">125 <span>TL</span></span><span class="product-note">Yumuşak & dengeli</span></div>
+        </article>
+        <article class="menu-card" data-category="hot">
+          <div class="card-top"><span class="product-icon hot" aria-hidden="true">☕</span><span class="product-category">Sıcak İçecekler</span></div>
+          <h3>Americano</h3><p>Sıcak suyla açılan çift espresso; sade ve dolgun bir kahve.</p><div class="card-bottom"><span class="price">105 <span>TL</span></span><span class="product-note">Kahvenin en sade hali</span></div>
+        </article>
+        <article class="menu-card" data-category="hot">
+          <div class="card-top"><span class="product-icon hot" aria-hidden="true">☕</span><span class="product-category">Sıcak İçecekler</span></div>
+          <h3>Türk Kahvesi</h3><p>Ağır ateşte, bol köpükle. Yanında bir lokumla servis edilir.</p><div class="card-bottom"><span class="price">90 <span>TL</span></span><span class="product-note">Kırk yıllık hatır</span></div>
+        </article>
+        <article class="menu-card" data-category="cold">
+          <div class="card-top"><span class="product-icon cold" aria-hidden="true">❄</span><span class="product-category">Soğuk İçecekler</span></div>
+          <h3>Buzlu Latte</h3><p>Çift espresso, soğuk süt ve bol buzla ferah bir kahve molası.</p><div class="card-bottom"><span class="price">135 <span>TL</span></span><span class="product-note">Buz gibi bir mola</span></div>
+        </article>
+        <article class="menu-card" data-category="cold">
+          <div class="card-top"><span class="product-icon cold" aria-hidden="true">❄</span><span class="product-category">Soğuk İçecekler</span><span class="badge">Favori</span></div>
+          <h3>Ev Yapımı Limonata</h3><p>Taze limon, bir dokunuş nane ve tam kararında tatlılık.</p><div class="card-bottom"><span class="price">110 <span>TL</span></span><span class="product-note">Bir yudum ferahlık</span></div>
+        </article>
+        <article class="menu-card" data-category="cold">
+          <div class="card-top"><span class="product-icon cold" aria-hidden="true">❄</span><span class="product-category">Soğuk İçecekler</span></div>
+          <h3>Şeftalili Soğuk Çay</h3><p>Demlenmiş siyah çay ve şeftali aroması, buzla servis edilir.</p><div class="card-bottom"><span class="price">100 <span>TL</span></span><span class="product-note">Hafif & meyvemsi</span></div>
+        </article>
+        <article class="menu-card" data-category="dessert">
+          <div class="card-top"><span class="product-icon dessert" aria-hidden="true">♡</span><span class="product-category">Tatlılar</span><span class="badge">Favori</span></div>
+          <h3>San Sebastian</h3><p>Karamelize yüzey, kremsi doku. Yanında çikolata sosuyla.</p><div class="card-bottom"><span class="price">185 <span>TL</span></span><span class="product-note">Bir dilim mutluluk</span></div>
+        </article>
+        <article class="menu-card" data-category="dessert">
+          <div class="card-top"><span class="product-icon dessert" aria-hidden="true">♡</span><span class="product-category">Tatlılar</span></div>
+          <h3>Çikolatalı Brownie</h3><p>Yoğun bitter çikolatalı, içi yumuşak, üzeri ince çıtır brownie.</p><div class="card-bottom"><span class="price">150 <span>TL</span></span><span class="product-note">Çikolata sevenlere</span></div>
+        </article>
+        <article class="menu-card" data-category="dessert">
+          <div class="card-top"><span class="product-icon dessert" aria-hidden="true">♡</span><span class="product-category">Tatlılar</span></div>
+          <h3>Havuçlu Kek</h3><p>Havuç, ceviz ve tarçın; üzerinde hafif krem peynir kreması.</p><div class="card-bottom"><span class="price">140 <span>TL</span></span><span class="product-note">Ev sıcaklığında</span></div>
+        </article>
+        <article class="menu-card" data-category="snack">
+          <div class="card-top"><span class="product-icon snack" aria-hidden="true">◒</span><span class="product-category">Atıştırmalıklar</span></div>
+          <h3>Ekşi Mayalı Tost</h3><p>Ekşi mayalı ekmek arasında eriyen kaşar, domates ve fesleğen.</p><div class="card-bottom"><span class="price">165 <span>TL</span></span><span class="product-note">Sıcacık & doyurucu</span></div>
+        </article>
+        <article class="menu-card" data-category="snack">
+          <div class="card-top"><span class="product-icon snack" aria-hidden="true">◒</span><span class="product-category">Atıştırmalıklar</span></div>
+          <h3>Peynirli Kruvasan</h3><p>Kat kat tereyağlı kruvasan, beyaz peynir ve taze roka.</p><div class="card-bottom"><span class="price">155 <span>TL</span></span><span class="product-note">Çıtır bir eşlikçi</span></div>
+        </article>
+        <article class="menu-card" data-category="snack">
+          <div class="card-top"><span class="product-icon snack" aria-hidden="true">◒</span><span class="product-category">Atıştırmalıklar</span></div>
+          <h3>Baharatlı Patates</h3><p>Fırınlanmış elma dilim patates, özel baharatlar ve yoğurtlu sos.</p><div class="card-bottom"><span class="price">120 <span>TL</span></span><span class="product-note">Paylaşınca daha güzel</span></div>
+        </article>
+      </div>
+      <p id="no-results" class="no-results" hidden>Aradığınız ürün bulunamadı</p>
+      <aside class="allergy-note"><span aria-hidden="true">ⓘ</span><p>Bir küçük not: Alerjen içerikler hakkında bilgi almak için lütfen kafe ekibine danışın.</p></aside>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><div><span class="footer-brand">mavi fincan<span>·</span></span><p>İyi ki bir mola verdiniz.</p></div><p>Demo menüdür, ürün ve fiyatlar örnektir</p><span class="footer-label">DİJİTAL MENÜ <span aria-hidden="true">↗</span></span></footer>
+</body>
+</html>
