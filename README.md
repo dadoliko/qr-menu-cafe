@@ -18,21 +18,21 @@ Proje GitHub Pages üzerinden yayımlanmaktadır.
 
 Dijital menünün masaüstü ekranındaki görünümü.
 
-![Mavi Fincan Kafe dijital menüsünün masaüstü görünümü](assets/screenshorts/masaustu.png)
+![Mavi Fincan Kafe dijital menüsünün masaüstü görünümü](assets/screenshots/masaustu.png)
 
 ### Mobil görünüm
 
 Dijital menünün kısa mobil önizlemesi.
 
-<img src="assets/screenshorts/mobil-onizleme.png" alt="Mavi Fincan Kafe dijital menüsünün kısa mobil önizlemesi" width="300">
+<img src="assets/screenshots/mobil-onizleme.png" alt="Mavi Fincan Kafe dijital menüsünün kısa mobil önizlemesi" width="300">
 
-[Tam sayfa mobil ekran görüntüsünü aç](assets/screenshorts/mobil.png)
+[Tam sayfa mobil ekran görüntüsünü aç](assets/screenshots/mobil.png)
 
 ### QR masa kartı
 
 Dijital menüye erişim için hazırlanan A6 QR masa kartının görünümü.
 
-![Mavi Fincan Kafe A6 QR masa kartının ekran görüntüsü](assets/screenshorts/qr-kart.png)
+![Mavi Fincan Kafe A6 QR masa kartının ekran görüntüsü](assets/screenshots/qr-kart.png)
 
 ## Projenin özellikleri
 
@@ -69,8 +69,13 @@ qr-menu-cafe/
 ├── qr-kart.html                        # QR masa kartı sayfası
 ├── qr-kart.css                         # Masa kartı ve A6 yazdırma stilleri
 ├── assets/
-│   └── qr/
-│       └── mavi-fincan-qr-temiz.png     # Masa kartında kullanılan QR görseli
+│   ├── qr/
+│   │   └── mavi-fincan-qr-temiz.png     # Masa kartında kullanılan QR görseli
+│   └── screenshots/                   # Portföy ekran görüntüleri
+│       ├── masaustu.png
+│       ├── mobil.png
+│       ├── mobil-onizleme.png
+│       └── qr-kart.png
 ├── teslim/
 │   └── mavi-fincan-masa-karti-final.pdf # Hazır masa kartı PDF dosyası
 ├── .gitignore
